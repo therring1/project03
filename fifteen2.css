@@ -1,0 +1,10 @@
+#container{
+	background: black;
+	width: 404px;
+	height: 404px;
+	position: relative;
+}
+
+#container *{
+	position: absolute;
+}
