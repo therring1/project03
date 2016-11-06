@@ -1,3 +1,14 @@
+#container{
+	background: black;
+	width: 404px;
+	height: 404px;
+	position: relative;
+}
+
+#container *{
+	position: absolute;
+}
+
 body{
 	background-repeat: repeat;
 	font-family: Arial, Georgia, sans-serif;
@@ -79,52 +90,7 @@ table td {
 	width: 400px;
 }
 
-.img0 {
-	background:url('../images/cn.png') 0 0 no-repeat;
-}
 
-.img1 {
-	background:url('../images/cn.png') -100px 0  no-repeat;
-}
-.img2 {
-	background:url('../images/cn.png') -200px 0  no-repeat;
-}
-.img3 {
-	background:url('../images/cn.png') -300px 0  no-repeat;
-}
-.img4 {
-	background:url('../images/cn.png') 0 -100px  no-repeat;
-}
-.img5 {
-	background:url('../images/cn.png') -100px -100px  no-repeat;
-}
-.img6 {
-	background:url('../images/cn.png') -200px -100px  no-repeat;
-}
-.img7 {
-	background:url('../images/cn.png') -300px -100px  no-repeat;
-}
-.img8{
-	background:url('../images/cn.png') 0 -200px  no-repeat;
-}
-.img9 {
-	background:url('../images/cn.png') -100px -200px  no-repeat;
-}
-.img10 {
-	background:url('../images/cn.png') -200px -200px  no-repeat;
-}
-.img11{
-	background:url('../images/cn.png') -300px -200px  no-repeat;
-}
-.img12 {
-	background:url('../images/cn.png') 0 -300px  no-repeat;
-}
-.img13 {
-	background:url('../images/cn.png') -100px -300px  no-repeat;
-}
-.img14 {
-	background:url('../images/cn.png') -200px -300px  no-repeat;
-}
 td{
     width: 100px;
     height: 100px;
