@@ -1,187 +1,53 @@
-body{
-	background-repeat: repeat;
-	font-family: Arial, Georgia, sans-serif;
-	font-size: 12pt;
-	line-height: 1.25em;
-	height: 100%;
-}
-.imageEdit
-{
-	height:100px;
-	
-}
-.centerImage
-{
-	text-align: center;
-}
-.empty {
-	background:#FFFFFF;
-}
-
-table {
-	border-color:#fff;
-	border-collapse:collapse;
-	float:none;
-}
-
 h1{
 	padding-top:30px;
 	text-align:center;
 	color: #000000;
-	text-shadow:4px 4px 8px orange;
-	font-family:Tahoma;
+	text-shadow:4px 4px 8px blue;
+	font-family: Courior;
 }
-.clear {
-	clear:both;
-}
-.textEdit
-{
-	font-weight:bold;
-	font-size:20px;
-	font-style: italic;
-	border: 2px solid black;
-}
-.colorChange
-{
-	font-size: 30px;
-	color:blue;
-}
-.textMiddle
-{
-	text-align: center;
-	color: #E65C00;
-	font-weight:bold;
-	font-family:"Lucida Console", Monaco, monospace;
-	font-size: 30px;
-}
-table td {
-	width:100px;
-	height:100px;
-	padding:0px;
-	margin:0px;
-	background:#FFFFFF;
-	font-size:32px;
-	font-weight:bold;
-	text-align:center;
-	font-family: sans-sarif;
-	color:#00FFFF;
-	border: 2px solid #000000;
-}
-.highlightTile {
-    border: 2px solid red;
-    text-decoration: underline;
-    color:#006600;
-}
-.gridAlign {
-	margin-top:20px;
-	margin-left:auto;
-	margin-right:auto;
-	width: 400px;
+body{
+  background: white;
+  padding-top: 10px;
+} 
+
+.container{
+  color: black; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type 4s steps(60, end); 
 }
 
-.img0 {
-	background:url('../images/cn.png') 0 0 no-repeat;
+container:nth-child(2){
+  animation: type2 8s steps(60, end);
 }
 
-.img1 {
-	background:url('../images/cn.png') -100px 0  no-repeat;
-}
-.img2 {
-	background:url('../images/cn.png') -200px 0  no-repeat;
-}
-.img3 {
-	background:url('../images/cn.png') -300px 0  no-repeat;
-}
-.img4 {
-	background:url('../images/cn.png') 0 -100px  no-repeat;
-}
-.img5 {
-	background:url('../images/cn.png') -100px -100px  no-repeat;
-}
-.img6 {
-	background:url('../images/cn.png') -200px -100px  no-repeat;
-}
-.img7 {
-	background:url('../images/cn.png') -300px -100px  no-repeat;
-}
-.img8{
-	background:url('../images/cn.png') 0 -200px  no-repeat;
-}
-.img9 {
-	background:url('../images/cn.png') -100px -200px  no-repeat;
-}
-.img10 {
-	background:url('../images/cn.png') -200px -200px  no-repeat;
-}
-.img11{
-	background:url('../images/cn.png') -300px -200px  no-repeat;
-}
-.img12 {
-	background:url('../images/cn.png') 0 -300px  no-repeat;
-}
-.img13 {
-	background:url('../images/cn.png') -100px -300px  no-repeat;
-}
-.img14 {
-	background:url('../images/cn.png') -200px -300px  no-repeat;
-}
-td{
-    width: 100px;
-    height: 100px;
-    background: red;
-    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
-    transition: width 2s, height 2s, transform 2s;
+container a{
+  color: black;
+  text-decoration: none;
 }
 
-td:active {
-    width: 350px;
-    height: 350px;
-    -webkit-transform: rotate(3080deg); 
-    transform: rotate(3080deg);
-}
-.validateLinks {
-	padding-top:10px;
-	padding-bottom:10px;
-	padding-left:10px;
-	padding-right:10px;
-	margin-left:auto;
-	margin-right:auto;
-	width: 300px;
-	background: gray;
-	font-size: 12pt;
-	font-weight: bold;
-	line-height: 1.25em;
-	color: #A52A2A;
-	float:right;
-	
-}
-input[type=button] {
-  width: 100px;
-  -webkit-transition: ease-in-out, width .5s ease-in-out;
-  transition: ease-in-out,width .5s ease-in-out;
-}
-input[type=button]:focus {
-  width: 350px;
+span{
+  animation: blink 1s infinite;
 }
 
-.fsSubmitButton
-{
-padding: 10px 20px 11px !important;
-font-size: 21px !important;
-background-color: black;
-font-weight: bold;
-text-shadow: 1px 1px #F36C8C;
-color: #ffffff;
-border-radius: 100px;
--moz-border-radius: 100px;
--webkit-border-radius: 100px;
-border: 1px solid #F36C8C;
-cursor: pointer;
-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
--moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
--webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
 }
 
-button{
-	font-weight:bold;
+::selection{
+  background: black;
 }
