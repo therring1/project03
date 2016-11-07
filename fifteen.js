@@ -14,25 +14,26 @@ function newgame(){
 	var i;
 	var x = 0;
 	var y = 0;
-			
-		for(i=0; i<cart.length;i++){	
-			out += '<div id="tile'+i+'" onclick="check(this,\''+i+'\')">';
-			out += '<img onmouseover="highl(this,\''+i+ '\')" onmouseout="rhighl(this)" src=' +cart[i] + " >";
+			for(i=0; i<cart.length;i++){	
+			out += '<div id="tile'+i+'" onclick="check(this,\''+i+'\')" onmouseover="highl(this,\''+i+ '\')" onmouseout="rhighl(this)">';
+			out +=  i+1;
 			out += '</div>';
 		}
-						
-	document.getElementById("container").innerHTML = out;
-	
-	
-	for(i=0; i<cart.length;i++){
+		
+		
+		document.getElementById("container").innerHTML = out;
+		
+		for(i=0; i<cart.length;i++){
 		if(x>400){
 			x=0;
 			y+=101;
 		}		
 		document.getElementById("tile"+i).style.left = x + 'px';
 		document.getElementById("tile"+i).style.top = y + 'px';
+		document.getElementById("tile"+i).style.backgroundImage = "url("+ cart[i]+ ")";
 		x+=101;
 	}
+		
 }
 
 function check(tile, pos){	
@@ -77,7 +78,7 @@ function slide(tile, start, end){//animate movement
 		if(x1==x2 && y1==y2){
 			clearInterval(id);
 			if(tilep[15]==null && equal()){
-				alert("gj");	
+				alert("Congratulations... You Won!!"); 	
 				window.location.href = "http://codd.cs.gsu.edu/~therring5/Project3/puzzle2/won.html";
 			}
 		}else{			
@@ -127,7 +128,7 @@ function chBack(x){
 		pos = tilep.indexOf(i);			
 		if(pos!=null){	
 			st = "tile"+i;
-			document.getElementById(st).innerHTML = '<img onmouseover="highl(this,\''+i+ '\')" onmouseout="rhighl(this)" src=' +arr[i] + " >";
+			document.getElementById(st).style.backgroundImage = "url("+ arr[i]+ ")";
 		}
 	}
 	
@@ -144,6 +145,8 @@ function highl(tile, pos){
 			return;		
 		}
 		tile.style.border = "solid red";
+		tile.style.color = "#006600";
+		tile.style.textDecoration = "underline";
 		
 	}
 	else if(full[position-1]){//check box to the left
@@ -151,18 +154,26 @@ function highl(tile, pos){
 			return;
 		}
 		tile.style.border = "solid red";
+		tile.style.color = "#006600";
+		tile.style.textDecoration = "underline";
 		
 	}
 	else if(full[position-4]){//check box at the top
 		tile.style.border = "solid red";
+		tile.style.color = "#006600";
+		tile.style.textDecoration = "underline";
 	}
 	else if(full[position+4]){//check box at the bottom
 		tile.style.border = "solid red";
+		tile.style.color = "#006600";
+		tile.style.textDecoration = "underline";
 	}
 }
 
 function rhighl(tile){
 	tile.style.border = "";
+	tile.style.color = "red";
+	tile.style.textDecoration = "";
 }
 
 function equal(){
@@ -278,3 +289,5 @@ function slidesh(tile, start, end){//animate movement
 	
 	
 }
+
+
